@@ -11,16 +11,21 @@
     <button type="submit" name="calcular">Calcular Tabuada</button>
 </form>
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (isset($_POST['calcular'])) {
-            $numero = (int) $_POST['numero'];
-            echo "<h2>Tabuada do número $numero</h2>";
-            for ($i = 1; $i <= 10; $i++) {
-            $resultado = $numero * $i;
-            echo "$numero x $i = $resultado<br>";
-            }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    if (isset($_POST['verificar'])) {
+
+        $numero = (float) $_POST['numero'];
+
+        if ($numero > 0) {
+            echo "O número $numero é positivo.";
+        } elseif ($numero < 0) {
+            echo "O número $numero é negativo.";
+        } else {
+            echo "O número é zero.";
         }
     }
+}
 ?>
 </body>
 </html>
