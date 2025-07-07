@@ -33,10 +33,10 @@
         $num2 = intval($_POST['numero2']);
 
         
-        if (somaDivisores($num1) == $num2 && somaDivisores($num2) == $num1) {
-            echo "<p>$num1 e $num2<são números amigos!</p>";
+    if (somaDivisores($num1) == $num2 && somaDivisores($num2) == $num1) {
+            echo "<p><strong>$num1</strong> e <strong>$num2</strong> são números amigos! </p>";
         } else {
-            echo "<p>$num1 e $num2<NÃO são números amigos.</p>";
+            echo "<p><strong>$num1</strong> e <strong>$num2</strong> NÃO são números amigos. </p>";
         }
     }
     ?>
